@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20211025 14:07:36.616" rpa="false" schemaversion="2">
+<suite id="s1" name="isinOlsunTest" source="C:\Users\Lenovo\Desktop\TestCases\HomeworkTests\isinOlsunTest.robot">
+<test id="s1-t1" name="verify the filters and homopage">
+<kw name="Test Case Filter Features" library="isinOlsunApp">
+<kw name="Open Browser To Index Page" library="isinOlsun">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211025 14:07:36.960" level="INFO">Opening browser 'chrome' to base url 'https://isinolsun.com/'.</msg>
+<status status="PASS" starttime="20211025 14:07:36.960" endtime="20211025 14:07:41.943"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211025 14:07:41.943" endtime="20211025 14:07:42.264"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:36.960" endtime="20211025 14:07:42.265"/>
+</kw>
+<kw name="Enter Job Name" library="isinOlsun">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[name="kw"]</arg>
+<arg>${JobName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:42.267" level="INFO">Typing text 'Garson' into text field 'css=[name="kw"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:42.266" endtime="20211025 14:07:42.669"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211025 14:07:42.670" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20211025 14:07:42.670" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20211025 14:07:42.670" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20211025 14:07:42.669" endtime="20211025 14:07:42.739"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:42.265" endtime="20211025 14:07:42.739"/>
+</kw>
+<kw name="Enter Location Name" library="isinOlsun">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@data-test="location-search-input"]</arg>
+<arg>${LocationName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:42.740" level="INFO">Typing text 'Kadıköy' into text field 'xpath://*[@data-test="location-search-input"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:42.740" endtime="20211025 14:07:43.030"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211025 14:07:43.032" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20211025 14:07:43.032" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20211025 14:07:43.032" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20211025 14:07:43.031" endtime="20211025 14:07:43.061"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:42.739" endtime="20211025 14:07:43.063"/>
+</kw>
+<kw name="Click IsBul Button" library="isinOlsun">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@data-test="main-search-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:43.063" level="INFO">Clicking button 'xpath://button[@data-test="main-search-button"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:43.063" endtime="20211025 14:07:49.035"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:43.063" endtime="20211025 14:07:49.035"/>
+</kw>
+<kw name="check the job search page" library="isinOlsun">
+<kw name="Wait Until Location Contains" library="SeleniumLibrary">
+<arg>ilanlari</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" starttime="20211025 14:07:49.036" endtime="20211025 14:07:49.101"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:49.035" endtime="20211025 14:07:49.102"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${FirstValue}</var>
+<arg>css=[class='jsx-3033598793 total-title'] b</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:49.278" level="INFO">${FirstValue} = 363</msg>
+<status status="PASS" starttime="20211025 14:07:49.102" endtime="20211025 14:07:49.278"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211025 14:07:52.283" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211025 14:07:49.278" endtime="20211025 14:07:52.283"/>
+</kw>
+<kw name="click the date filter" library="isinOlsun">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>css=[data-test="publish-date-filter-button"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20211025 14:07:52.283" level="INFO">Simulating Mouse Over on element 'css=[data-test="publish-date-filter-button"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:52.283" endtime="20211025 14:07:52.612"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[data-test="publish-date-filter2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:52.612" level="INFO">Clicking element 'css=[data-test="publish-date-filter2"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:52.612" endtime="20211025 14:07:52.808"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:52.283" endtime="20211025 14:07:52.809"/>
+</kw>
+<kw name="click the working type filter" library="isinOlsun">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>css=[data-test="work-type-filter-button"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20211025 14:07:52.810" level="INFO">Simulating Mouse Over on element 'css=[data-test="work-type-filter-button"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:52.810" endtime="20211025 14:07:53.115"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[data-test="work-type-filter1"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:53.115" level="INFO">Clicking element 'css=[data-test="work-type-filter1"]'.</msg>
+<status status="PASS" starttime="20211025 14:07:53.115" endtime="20211025 14:07:54.211"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:52.809" endtime="20211025 14:07:54.212"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${SecondValue}</var>
+<arg>css=[class='jsx-3033598793 total-title'] b</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211025 14:07:54.241" level="INFO">${SecondValue} = 30</msg>
+<status status="PASS" starttime="20211025 14:07:54.212" endtime="20211025 14:07:54.241"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${FirstValue}&gt;${SecondValue}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20211025 14:07:54.241" endtime="20211025 14:07:54.242"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:36.960" endtime="20211025 14:07:54.243"/>
+</kw>
+<status status="PASS" starttime="20211025 14:07:36.960" endtime="20211025 14:07:54.243"/>
+</test>
+<status status="PASS" starttime="20211025 14:07:36.616" endtime="20211025 14:07:54.244"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="isinOlsunTest">isinOlsunTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,6 @@
+HOMOPAGE = "https://www.amazon.com.tr/"
+SEARCH_KEYWORD = "laptop"
+USERNAME_1 = "userid"
+mail = "kullaniciadi"
+password = "parola"
+false_password = "yanlisparola"
